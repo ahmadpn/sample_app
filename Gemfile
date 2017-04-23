@@ -20,6 +20,8 @@ gem 'haml-rails'
 group :development, :test do
   gem 'sqlite3', '1.3.12'
   gem 'byebug',  '9.0.0', platform: :mri
+  gem 'rspec-rails', '~> 3.5'
+  gem 'capybara'
 end
 
 group :development do
