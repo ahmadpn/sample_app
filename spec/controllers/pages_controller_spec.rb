@@ -16,7 +16,7 @@ describe PagesController do
 
     it "has a right title" do
       get :home
-      expect(response.body).to have_selector('title', text: "Home | #{@base_title}", visible: false)
+      assert_select 'title', "#{@base_title}"
     end
   end
 
@@ -29,7 +29,7 @@ describe PagesController do
 
     it "has a right title" do
       get :help
-      expect(response.body).to have_selector('title', text: "Help | #{@base_title}", visible: false)
+      assert_select 'title', "Help | #{@base_title}"
     end
   end
 
@@ -42,7 +42,7 @@ describe PagesController do
 
     it "has a right title" do
       get :about
-      expect(response.body).to have_selector('title', text: "About | #{@base_title}", visible: false)
+      assert_select 'title', "About | #{@base_title}"
     end
   end
 
@@ -55,7 +55,7 @@ describe PagesController do
 
     it "has a right title" do
       get :contact
-      expect(response.body).to have_selector('title', text: "Contact | #{@base_title}", visible: false)
+      assert_select 'title', "Contact | #{@base_title}"
     end
   end
 
