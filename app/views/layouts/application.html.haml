@@ -6,17 +6,10 @@
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    /[if lt IE 9]
-      %script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js")
+    = render 'layouts/shim'
 
   %body
-    %header.navbar.navbar-fixed-top.navbar-inverse
-      .container
-        = link_to "sample app", "#", id: "logo"
-        %nav
-          %ul.nav.navbar-nav.navbar-right
-            %li= link_to "Home",   '#'
-            %li= link_to "Help",   '#'
-            %li= link_to "Log in", '#'
+    = render 'layouts/header'
     .container
       = yield
+      = render 'layouts/footer'
