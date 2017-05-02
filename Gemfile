@@ -14,6 +14,7 @@ gem 'coffee-rails', '4.2.1'
 gem 'jquery-rails', '4.1.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
+gem 'bcrypt',       '3.1.11'
 gem 'haml'
 gem 'haml-rails'
 gem 'bootstrap-sass'
@@ -23,6 +24,8 @@ group :development, :test do
   gem 'byebug',  '9.0.0', platform: :mri
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
 end
 
 group :development do
@@ -33,7 +36,7 @@ group :development do
 end
 
 group :test do
-  
+  gem 'database_cleaner',      '1.5.3'
 end
 
 group :production do
